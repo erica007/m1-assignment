@@ -91,3 +91,17 @@ input [type="submit"] {
     margin: 20px 1 10px 0;
     width: 100px;
 }
+
+img[src="cat4.jpeg"] {
+    position: relative;
+    left:-100px;
+    z-index: 3;
+ }
+ img+p+img{
+	position:absolute;
+	left:450px;
+	top:550px;
+	transform: rotate(8deg); 
+   -webkit-transform: rotate(8deg);
+	-moz-transform: rotate(8deg);
+}
