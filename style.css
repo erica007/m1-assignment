@@ -1,9 +1,11 @@
 header {
-    background: url(image/pet3.jpeg) 0 -200px no-repeat;
-    background-size: 1500px;
-    height: 280px;
+    background: url(image/background.jpg) 0 -100px no-repeat;
+    background-size: 100%;
+    height: 200px;
     padding-top: 100px;
     padding-left: 100px;
+    font-size: 60px; 
+    color:rgb(129,141,179);
     font-weight: bold;
     font-family: Arial, Helvetica, sans-serif;
 }
@@ -21,6 +23,7 @@ li a:link{
 }
 li a:visited{
     color:#640dac;
+
 }
 li a:hover{
     color:#333;
@@ -30,17 +33,18 @@ li a:active{
 }
 
 nav{
-    background-color: rgb(216, 233, 216);
+    background-color: rgb(129,141,179);
     height: 50px;
     text-align: center;
     padding-top: 2px;
+    color: rgb(211,218,240);
 }
 main{
     margin: 50px;
     /*height: 400px; */
 }
 main h1 {
-    color:rgb(129,141,179);
+    color:rgb(43, 42, 42);
     font-family: arial;
 }
 
@@ -105,3 +109,65 @@ img[src="cat4.jpeg"] {
    -webkit-transform: rotate(8deg);
 	-moz-transform: rotate(8deg);
 }
+/* Gallery */
+#gallery {
+    z-index: 1;
+    position: relative;
+}
+ul#photos {
+    background: lightgray;
+    width: 100%;
+    margin-top: 30px;
+    position: relative;
+}
+#photos li {
+    display: inline-block;
+}
+#photos li .photo {
+    width: 100%;
+    display: inline-block;
+}
+#photos .photo p{
+    font-family: Arial;
+    text-align: center;
+}
+
+#photos .photo .caption {
+    color:rgb(129,141,179);
+
+}
+#photos .photo .description{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    position: relative;
+    top:200px;
+    background: #fff;
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: visibility 0s, opacity 0.5s linear; 
+    transition: visibility 0s, opacity 0.5s linear;
+}
+
+#photos .photo img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    padding: 20px 20px 20px 20px;
+}
+
+#photos .photo img:hover{
+    cursor: pointer;
+}
+#photos .photo:hover .description{
+    font-family: Arial;
+    text-align: center;
+    margin-left: 60px;
+    margin-right: 60px;
+    position: relative;
+    background: rgb(129,141,179);
+    opacity: 1;
+    visibility: visible;
+    -webkit-transition: visibility 0s, opacity 0.5s linear; 
+    transition: visibility 0s, opacity 0.5s linear;
+}
+

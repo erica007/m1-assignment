@@ -2,7 +2,7 @@
 <html>
 <head>
     
-<title>Irvine Pet Adoption <Center></Center></title> 
+<title>Irvine Pet Adoption</title> 
 <link rel="stylesheet" href="style.css">
 <meta charset="utf-8">
 
@@ -13,7 +13,7 @@
 <DIV id="container">
 
 <!--Brand of Website-->    
-<header style="font-size: 60px; color:#fff;">Pet adoption center </header>
+<header>Pet adoption center </header>
 <nav>
     <ul>
         <li><a href="index.html"> Home</a></li>
@@ -30,28 +30,27 @@
    <p>Take a look at our beautiful pets in here!</p>
 </main> <!--End Main Content-->
 
-<section>
-    <ul id="partners">
-    <li class="partner">
-    <h3>Adoption Pet Type: Cat</h3>
-    <img src="image/cat2.jpeg" width="250px" height="200px" alt="Cat">
-    <img src="image/cat1.jpeg" width="400px" height="200px" alt="Cat">
-    <img src="image/cat3.jpeg" width="400px" height="200px" alt="Cat">
-    </li>
-    <li class="partner">
-    <h3>Adoption Pet Type: Dog</h3>
-    <img src="image/dog1.jpeg" width="250px" height="200px" alt="Cat">
-    <img src="image/dog2.jpeg" width="400px" height="200px" alt="Cat">
-    <img src="image/dog3.jpeg" width="400px" height="200px" alt="Cat">
-     </li>
-    <li class="partner">
-    <h3>Adoption Pet Type: Guinea pig</h3>
-    <img src="image/mice1.jpeg" width="250px" height="200px" alt="Cat">
-    <img src="image/mice2.jpeg" width="400px" height="200px" alt="Cat">
-    <img src="image/mice3.jpeg" width="400px" height="200px" alt="Cat">
-    </li>
+<div id="gallery">
+    <ul id="photos">
     </ul>
-</section>
+</div>
+
+    <!--
+    <ul id="partners">
+    <img src="image/pet1.jpeg" width="400px" height="220px">
+    <img src="image/pet2.jpeg" width="400px" height="220px">
+    <img src="image/pet3.jpeg" width="400px" height="220px">
+    <img src="image/pet4.jpeg" width="400px" height="220px">
+    <img src="image/pet5.jpeg" width="400px" height="220px">
+    <img src="image/pet6.jpeg" width="400px" height="220px">
+    <img src="image/pet7.jpeg" width="400px" height="220px">
+    <img src="image/pet8.jpeg" width="400px" height="220px">
+    <img src="image/pet9.jpeg" width="400px" height="220px">
+    <img src="image/pet10.jpeg" width="400px" height="220px">
+    <img src="image/pet11.jpeg" width="400px" height="220px">
+    <img src="image/pet12.jpeg" width="400px" height="220px">
+    </ul>
+    -->
 
 <!--Footer Information-->
 <footer>&copy; Copyright 2022 :: Pet Adoption Center</footer>
@@ -66,5 +65,48 @@
     </p>
 </div> <!--End Containert-->
 
+<script>
+//loop for image gallery
+   var captionTexts = ["Victor, from local", "Teddy, from local", "King, from local",
+                        "Golden, from local", "Joy, from local"
+                        ,"Memes, in foster family" , "Buddies, traveling", "Greys, from AZ", 
+                        "Cathy, in foster family", "smily, condition adoption" ,"Mister lonely, from local"];
+var descTexts = ["12 months", "6 months","18 months", "5 months","16 months", "7 months","10 months", 
+"6 months","12 months", "6 months","3 months"];
+var photos = [];
+var fileNames = [];
+var imagefileNames = [];
+var imageList = [];
+var image;
+var captions =[];
+var descriptions = [];
+var openList = "<li class='photo'>";
+var closeList = "</li>";
+var openCaptionTag = "<p class='caption'>";
+var closeCaptionTag = "</p>";
+var titleTexts = ["Dog - Vince", "Dog - Teddy", "Dog - Victor", "Dog - Uni", "Dog - Meatball"
+                    , "Cat - Meme", "Cat - Flur", "Cat - Lia", "Cat - Cath", "Cat - CC"];
+var openDescTag = "<p class='description' (";
+var openDescClose = ")'>";
+var closeDescTag = "</p>";
+
+//Create a loop to create 10 images
+for (var i=0; i<11; i++) {
+        fileNames.push("pet" + [i+1]);
+        photos.push("<img src='image/" + fileNames[i] + ".jpeg'>");//  
+        captions.push(openCaptionTag + captionTexts[i] + closeCaptionTag);
+        descriptions.push(openDescTag + [i] + openDescClose + descTexts[i] + closeDescTag);  
+        image = openList + descriptions[i] + photos[i] + captions[i] + closeList;        
+        imageList.push(image);
+    }
+
+//console.log(imageList[0]);
+
+//Display 10 images from array
+document.getElementById("photos").innerHTML = imageList.join(" ");
+
+//  End photo gallery js
+
+</script>
 </body>
 </html>
