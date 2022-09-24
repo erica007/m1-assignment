@@ -137,7 +137,6 @@ ul#photos {
 
 }
 #photos .photo .description{
-    font-family: Arial, Helvetica, sans-serif;
     text-align: center;
     position: relative;
     top:200px;
@@ -155,19 +154,51 @@ ul#photos {
     padding: 20px 20px 20px 20px;
 }
 
-#photos .photo img:hover{
+#photos .photo .description:hover{
     cursor: pointer;
 }
 #photos .photo:hover .description{
-    font-family: Arial;
     text-align: center;
+    width: auto;
+    height: 30px;
+    padding: 30px 0;
     margin-left: 60px;
     margin-right: 60px;
     position: relative;
-    background: rgb(129,141,179);
-    opacity: 1;
+    background: rgb(250, 249, 249);
+    opacity: 0.5;
     visibility: visible;
     -webkit-transition: visibility 0s, opacity 0.5s linear; 
     transition: visibility 0s, opacity 0.5s linear;
+}
+
+#infoBox {
+    background: #fff;
+    opacity: 0.9;
+    width: 400px;
+    height: 200px;
+    position:absolute;
+    left: 40%;
+    top: 25%;
+    visibility: hidden; 
+}
+
+#title {
+    font-size: 30px;
+    font-weight: bold;
+    color: rgb(134, 15, 203);
+    padding: 20px 0px 0px 20px;
+}
+
+#info {
+    font-size: 20px;
+    color: rgb(129,141,179);
+    padding: 20px 0px 0px 20px;
+}
+
+#closeInfo {
+    font-size: 15px;
+    color: rgb(129,141,179);
+    padding: 20px 0px 0px 20px;
 }
 
