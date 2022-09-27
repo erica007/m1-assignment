@@ -8,7 +8,8 @@
 
 
 </head>
-<body>
+<body id="contact" onload="hidecontactBox()">
+
 <!--Container to wrap everything-->
 <DIV id="container">
 
@@ -59,21 +60,40 @@
 <form action="/contact" method="post">
     <fieldset>
         <legend>Contact Form</legend>
+        <div class="textbox">
         <label>Enter your full name</label><br>
         <input type="text" name="name"><br>
-        <label>Enter your email</label><br>
-        <input type="email" name="email"><br>
-        <label>Enter your phone</label><br>
-        <input type="text" name="phone"><br>
-        <br><label>How should we contact you?</label><br>
-        <input type="radio" name="email" value="email"/>Email
-        <input type="radio" name="phone" value="phone"/>Phone <br/>
+        <!-- 
+            <label>Enter your email</label><br>
+            <input type="email" name="email"><br>
+            <label>Enter your phone</label><br>
+            <input type="text" name="phone"><br> 
+        -->
+        </div>
+
+        <div class="dropdown">
+          <label>How should we contact you?</label>
+          <select id="contactMethod" name="contact" onChange="evaluateOption()">
+            <option id="selectone" value="selectone">Select One</option>
+            <option value="email">Email</option>
+            <option value="phone">Phone</option>
+          </select>
+          <div id="contactBox"></div>
+
+        </div>
+        <!--
+            <input type="radio" name="email" value="email"/>Email
+            <input type="radio" name="phone" value="phone"/>Phone <br/>
+        -->
         <br>How did you hear about us::<br>
         <textarea rows="5" cols="30"></textarea><br>
         <input type="submit" value="sign-up">
     </fieldset>
 </form>
 </main> <!--End Main Content-->
+
+<!-- Contact Form Javescripts-->
+<script src="js/contactbox.js"></script>
 
 </body>
 </html>
