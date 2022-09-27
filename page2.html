@@ -71,16 +71,15 @@
         -->
         </div>
 
-        <div class="dropdown">
           <label>How should we contact you?</label>
-          <select id="contactMethod" name="contact" onChange="evaluateOption()">
-            <option id="selectone" value="selectone">Select One</option>
+          <select id="contact_method" name="contact_method">
+            <option id="selectone" value="Select_One">Select One</option>
             <option value="email">Email</option>
             <option value="phone">Phone</option>
           </select>
-          <div id="contactBox"></div>
-
-        </div>
+          <label id="contact_text"></label>
+          <input id="contact_input">
+  
         <!--
             <input type="radio" name="email" value="email"/>Email
             <input type="radio" name="phone" value="phone"/>Phone <br/>
@@ -93,7 +92,7 @@
 </main> <!--End Main Content-->
 
 <!-- Contact Form Javescripts-->
-<script src="js/contactbox.js"></script>
+<script src="contactform.js"></script>
 
 </body>
 </html>
