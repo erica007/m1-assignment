@@ -201,3 +201,37 @@ ul#photos {
     color: rgb(129,141,179);
     padding: 20px 0px 0px 20px;
 }
+
+
+#gallery {
+    color: black;
+}
+
+.box {
+    z-index: 2;
+    position: relative;
+    top: -700px;
+    left: 50%;
+    opacity: 1;
+    transform: translate(-50%, -50%);
+    width: 500px;    
+    height: 500px;
+    background: #fff;
+    padding: 20px;
+    padding-bottom: 50px;
+    border-radius: 5px;
+    box-shadow: 5px 5px 5px #444444;
+}
+
+.box img {
+    width: 500px;
+    height: 500px;    
+    object-fit: cover;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.close {
+    float: right;
+    cursor: pointer;
+}
